@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 import sys
 import logging
-import site
 import os
 
-# Add the virtual environment site-packages
-site.addsitedir('/var/www/shiwkesh/nudity/venv/lib/python3.10/site-packages')
 
 # Configure logging
 logging.basicConfig(stream=sys.stderr, level=logging.INFO)
