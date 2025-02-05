@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/var/www/shiwkesh/nudity/venv/bin/python3
 import sys
 import logging
 import site
