@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 try:
     # Load the trained model
-    model = joblib.load('iris_model.pkl')
+    model = joblib.load('/var/www/shiwkesh/nudity/iris_model.pkl')
     app.logger.info("Model loaded successfully.")
 except Exception as e:
     app.logger.error(f"Error loading model: {e}")
