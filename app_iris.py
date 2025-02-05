@@ -6,15 +6,6 @@ import os
 from logging.handlers import RotatingFileHandler
 app = Flask(__name__)
 
-
-# Setup logging
-log_file = 'logs/flask_app.log'
-handler = RotatingFileHandler(log_file, maxBytes=100000, backupCount=3)
-handler.setLevel(logging.ERROR)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-handler.setFormatter(formatter)
-app.logger.addHandler(handler)
-
 try:
     # Load the trained model
     model = joblib.load('iris_model.pkl')
