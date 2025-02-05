@@ -6,9 +6,6 @@ import os
 from logging.handlers import RotatingFileHandler
 app = Flask(__name__)
 
-# Create logs directory if not exists
-if not os.path.exists('logs'):
-    os.makedirs('logs', exist_ok=True)
 
 # Setup logging
 log_file = 'logs/flask_app.log'
