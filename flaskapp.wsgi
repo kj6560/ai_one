@@ -13,5 +13,5 @@ logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0, "/var/www/shiwkesh/nudity/")
 
 # Import and initialize Flask app
-from FlaskApp import app as application
+from nudity import app as application
 application.secret_key = 'ai_one_keshav'
