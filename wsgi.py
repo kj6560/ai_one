@@ -15,7 +15,7 @@ sys.path.insert(0, "/var/www/shiwkesh/nudity/")
 
 # Import and initialize Flask app
 try:
-    from FlaskApp import app as application
+    from app import app as application
 except ImportError as e:
     logging.error(f"Failed to import Flask app: {e}")
     raise
