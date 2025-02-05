@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, request, jsonify, render_template
 import joblib
 import numpy as np
@@ -19,7 +18,7 @@ except Exception as e:
 @app.route('/')
 def home():
     app.logger.info("Home route accessed.")
-    return render_template('templates/index.html')
+    return render_template('index.html')  # Corrected template path
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -46,6 +45,5 @@ def predict():
         app.logger.error(f"Error in prediction: {e}")
         return jsonify({'error': str(e)}), 500
 
-if __name__ != '__main__':
-    import logging
-    logging.basicConfig(level=logging.DEBUG)
+if __name__ == '__main__':
+    app.run(debug=True)  # Corrected the condition to run the app
