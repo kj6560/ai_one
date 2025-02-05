@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import sys import logging 
+import sys 
+import logging 
 logging.basicConfig(stream=sys.stderr) 
 sys.path.insert(0,"/var/www/shiwkesh/nudity/")
 from FlaskApp import app as application 
